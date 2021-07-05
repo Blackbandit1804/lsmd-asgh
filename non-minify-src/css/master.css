@@ -1,0 +1,87 @@
+/* https://colorhunt.co/palette/2763 */
+* {
+	transition-duration:0.3s;
+}
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+/* Vertical Navbar */
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 25%;
+	background-color: #222831;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+}
+
+nav ul li a {
+	display: block;
+	color: #eeeeee;
+	text-decoration: none;
+	text-align: center;
+	padding: 5%;
+	margin-top: 3%; 
+	font-size: 100%;
+}
+
+nav ul li a:hover {
+	background-color: #393e46;
+}
+
+nav ul li .active {
+	background-color: #00adb5;
+}
+
+/* İçeriği sağdan başlatma */
+.indexContainer, .hasta-kayitContainer, .hasta-kayitIMG, .ems-raporContainer, .ems-raporIMG, .receteContainer, .receteIMG, .ameliyat-raporuContainer, .ameliyat-raporuIMG, .psikoloji-raporuContainer, .psikoloji-raporuIMG, .darp-raporuContainer, .darp-raporuIMG, .saglik-raporuContainer, .saglik-raporuIMG, .istirahat-raporuContainer, .istirahat-raporuIMG, .dogum-raporuContainer, .olum-raporuContainer, .olum-raporuIMG, .otopsi-raporuContainer, .otopsi-raporuIMG {
+	margin-left: 25%;
+	padding: 1px 16px;
+	color: #222831;
+}
+
+/* Ana Sayfa img ve arama kutusu tasarımı*/
+.indexContainer img {
+	width: 30%;
+	margin-top: 7.5%;
+}
+.indexContainer .arama-kutusu {
+	border: 2px solid #393e46;
+	padding: 1%;
+}
+
+/* Butonların tasarımı */
+.indexContainer .ara-button, .tasarim_button {
+	background-color: #00adb5;
+	color: #eeeeee;
+	padding: 1%;
+	border-radius: 50px;
+	border: 2px solid #393e46;
+	width: 10%;
+}
+
+/* Butonların efekti */
+.indexContainer .ara-button:hover, .tasarim_button:hover {
+	background-color: #393e46;
+}
+
+/* Rapor başlık fotoğrafları */
+.hasta-kayitIMG img, .ems-raporIMG img, .receteIMG img, .ameliyat-raporuIMG img, .psikoloji-raporuIMG img, .darp-raporuIMG img, .saglik-raporuIMG img, .istirahat-raporuIMG img, .olum-raporuIMG img, .otopsi-raporuIMG img {
+	width: 100%;
+}
+
+/* Formlar için */
+.hasta-kayitContainer, .ems-raporContainer, .receteContainer, .ameliyat-raporuContainer, .psikoloji-raporuContainer, .darp-raporuContainer, .saglik-raporuContainer, .istirahat-raporuContainer, .dogum-raporuContainer, .olum-raporuContainer, .otopsi-raporuContainer {
+	margin-left: 30%;
+}
+
+/* Oluşan Şablonların Kutusu */
+.olusan_sablon {
+	border: 2px solid #393e46;
+	padding: 0.1%;
+}
