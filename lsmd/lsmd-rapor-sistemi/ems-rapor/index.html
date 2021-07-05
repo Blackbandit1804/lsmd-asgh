@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="LSMD Rapor Sistemi">
+	<meta name="author" content="dreps#5646">
+	<link rel="stylesheet" href="../src/css/master.css">
+	<link rel="icon" type="image/gif/png" href="https://cdn.discordapp.com/attachments/780839923824590849/853348417140817920/lsmd_ems.png">
+	<title>LSMD Rapor Sistemi</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="..">ANA SAYFA</a></li>
+			<li><a href="../hasta-kayit">HASTA KAYIT</a></li>
+			<li><a href="../ems-rapor" class="active">EMS RAPOR</a></li>
+			<li><a href="../recete">REÇETE</a></li>
+			<li><a href="../ameliyat-raporu">AMELİYAT RAPORU</a></li>
+			<li><a href="../psikoloji-raporu">PSİKOLOJİ RAPORU</a></li>
+			<li><a href="../darp-raporu">DARP RAPORU</a></li>
+			<li><a href="../saglik-raporu">SAĞLIK RAPORU</a></li>
+			<li><a href="../istirahat-raporu">İSTİRAHAT RAPORU</a></li>
+			<li><a href="../dogum-raporu">DOĞUM RAPORU</a></li>
+			<li><a href="../olum-raporu">ÖLÜM RAPORU</a></li>
+			<li><a href="../otopsi-raporu">OTOPSİ RAPORU</a></li>
+		</ul>
+	</nav>
+	<div class="ems-raporIMG" align="center">
+		<img src="../src/img/ems-rapor.jpg" alt="EMS Rapor">
+	</div>
+	<div class="ems-raporContainer">
+		<form id="ems-rapor-sablonu">
+			<h3><u>Hastanın;</u></h3>
+			<label for="emsRaporAdSoyad"><b>Ad / Soyad:</b></label>
+			<input type="text" id="emsRaporAdSoyad" name="emsRaporAdSoyad" placeholder="Hank Thrash">
+			<br><br>
+			<label for="emsRaporDogumTarihi"><b>Yaş:</b></label>
+			<input type="number" id="emsRaporDogumTarihi" name="emsRaporDogumTarihi">
+			<br><br>
+			<label for="emsRaporTelNo"><b>Telefon Numarası:</b></label>
+			<input type="tel" id="emsRaporTelNo" name="emsRaporTelNo" placeholder="123-456" maxlength="7">
+			<hr>
+			<label for="emsRaporVakaLokasyonu"><b>Vaka Lokasyonu:</b></label>
+			<input type="text" id="emsRaporVakaLokasyonu" name="emsRaporVakaLokasyonu" placeholder="Market St.">
+			<br><br>
+			<label for="emsRaporVaka"><b>Vaka Türü:</b></label>
+			<select id="emsRaporVaka" name="ems_rapor_hastanin_vaka_turu" form="ems-rapor-sablonu">
+				<option value="GSW [X]<br />MVA [ ]<br />Darp [ ]<br />EX [ ]">GSW</option>
+				<option value="GSW [ ]<br />MVA [X]<br />Darp [ ]<br />EX [ ]">MVA</option>
+				<option value="GSW [ ]<br />MVA [ ]<br />Darp [X]<br />EX [ ]">Darp</option>
+				<option value="GSW [ ]<br />MVA [ ]<br />Darp [ ]<br />EX [X]">EX</option>
+				<option value="GSW [ ]<br />MVA [ ]<br />Darp [ ]<br />EX [ ]">Diğer</option>
+			</select>
+			<label for="emsRaporVakaDiger"><b>Diğer:</b></label>
+			<input type="text" id="emsRaporVakaDiger" name="emsRaporVakaDiger" placeholder="Diğer'i seçmediyseniz boş bırakın." style="width: 25%;">
+			<br><br>
+			<label for="emsRaporOlayinSeyri"><b>Olayın seyri:</b></label>
+			<input type="text" id="emsRaporOlayinSeyri" name="emsRaporOlayinSeyri" placeholder="N/A N/A N/A" style="width: 100%;">
+			<br><br>
+			<label for="emsRaporOlayinTarih"><b>Olayın tarihi ve saati:</b></label>
+			<input type="date" id="emsRaporOlayinTarih" name="emsRaporOlayinTarih">
+			<input type="time" id="emsRaporOlayinSaat" name="emsRaporOlayinSaat">
+			<hr>
+			<h3><u>Personelin;</u></h3>
+			<label for="emsRaporPersonelAdSoyad"><b>Ad / Soyad:</b></label>
+			<input type="text" id="emsRaporPersonelAdSoyad" name="emsRaporPersonelAdSoyad" placeholder="Dolores Ruecker">
+			<label for="emsRaporPersonelRutbe"><b>Rütbesi:</b></label>
+			<input type="text" id="emsRaporPersonelRutbe" name="emsRaporPersonelRutbe" placeholder="Paramedik"><br><br>
+			<label for="emsRaporPersonelImza"><b>İmza:</b></label>
+			<input type="text" id="emsRaporPersonelImza" name="emsRaporPersonelImza" placeholder="[img]https://i.hizliresim.com/NN6jSa.png[/img]" style="width: 35%;">
+			<input type="reset" class="tasarim_button" value="FORMU TEMİZLE" style="width: 15%;">
+			<br><br>
+		</form>
+<button class="tasarim_button" onclick="emsRaporYeniKonuAc()" style="width: 15%;">YENİ KONU AÇ</button>
+<button class="tasarim_button" onclick="emsRaporVerileriYazdir()">YAZDIR</button>
+<h5>Yazdır'a bastıktan sonra aşağıdaki kutuya tıklayarak, kopyalayınız.</h5>
+<h6>Açtığınız kayıtları discord'daki <span style="color: red;">#ems-rapor</span> kanalına atmayı unutmayınız.</h6>
+<pre contenteditable="true" class="olusan_sablon" onclick="selectAllForm()">
+[div style="padding:10px; border:1px solid #e2e2e2"]
+[center]
+[table]
+[tr]
+[td]    [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853348478976262144/lsmd_ems2.png[/img][/td]
+[td]             [/td]
+[td]
+
+[div style="padding:10px; border-left:5px solid #89b5dd; border-right:5px solid #89b5dd;"]
+
+
+[center][size=18pt][b]EMS RAPORU[/b][/size][/center]
+
+
+[/td]
+[td]             [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853276763484323870/hgh_logo.png[/img][/td]
+[td]    [/td]
+[/tr]
+[/table]
+[/center]
+[hr]
+
+[b][u][size=12pt]Hastanın;[/size][/u][/b]
+
+[b]Adı Soyadı:[/b] <span id="span_emsRaporAdSoyad">N/A</span>
+
+[b]Yaş:[/b] <span id="span_emsRaporDogumTarihi">N/A</span>
+
+[b]Telefon Numarası:[/b] <span id="span_emsRaporTelNo">N/A</span>
+
+[hr]
+
+[b]Vaka Lokasyonu:[/b] <span id="span_emsRaporVakaLokasyonu">N/A</span>
+
+[b]Vaka Türü:[/b] Aşağıdakilerin hepsi boşsa seçim "Diğer"dir.
+<span id="span_emsRaporVaka"></span>
+Diğer [ <span id="span_emsRaporVakaDiger">N/A</span> ]
+
+[b]Olayın seyri:[/b] <span id="span_emsRaporOlayinSeyri">N/A</span>
+
+[b]Olayın tarihi ve saati:[/b] <span id="span_emsRaporOlayinTarih">YYYY.AA.GG</span> - <span id="span_emsRaporOlayinSaat">SS:DD</span>
+
+[hr]
+
+[b][u][size=12pt]Personelin;[/size][/u][/b]
+
+[b]Adı Soyadı:[/b] <span id="span_emsRaporPersonelAdSoyad">N/A</span>
+
+[b]Rütbesi:[/b] <span id="span_emsRaporPersonelRutbe">N/A</span>
+
+[right][b]İmza: [/b]<span id="span_emsRaporPersonelImza">N/A</span>[/right]
+
+[/div]
+</pre>
+	</div>
+<script src="../src/js/master.js"></script>
+</body>
+</html>

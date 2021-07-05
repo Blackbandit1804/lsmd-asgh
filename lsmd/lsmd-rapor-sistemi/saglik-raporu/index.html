@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="LSMD Rapor Sistemi">
+	<meta name="author" content="dreps#5646">
+	<link rel="stylesheet" href="../src/css/master.css">
+	<link rel="icon" type="image/gif/png" href="https://cdn.discordapp.com/attachments/780839923824590849/853354765521780776/lsmd_asgh.png">
+	<title>LSMD Rapor Sistemi</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="..">ANA SAYFA</a></li>
+			<li><a href="../hasta-kayit">HASTA KAYIT</a></li>
+			<li><a href="../ems-rapor">EMS RAPOR</a></li>
+			<li><a href="../recete">REÇETE</a></li>
+			<li><a href="../ameliyat-raporu">AMELİYAT RAPORU</a></li>
+			<li><a href="../psikoloji-raporu">PSİKOLOJİ RAPORU</a></li>
+			<li><a href="../darp-raporu">DARP RAPORU</a></li>
+			<li><a href="../saglik-raporu" class="active">SAĞLIK RAPORU</a></li>
+			<li><a href="../istirahat-raporu">İSTİRAHAT RAPORU</a></li>
+			<li><a href="../dogum-raporu">DOĞUM RAPORU</a></li>
+			<li><a href="../olum-raporu">ÖLÜM RAPORU</a></li>
+			<li><a href="../otopsi-raporu">OTOPSİ RAPORU</a></li>
+		</ul>
+	</nav>
+	<div class="saglik-raporuIMG" align="center">
+		<img src="../src/img/saglik-raporu.jpg" alt="Sağlık Raporu">
+	</div>
+	<div class="saglik-raporuContainer">
+		<form id="saglik-raporu-sablonu">
+			<h3><u>Sağlık Raporunun;</u></h3>
+			<label for="saglikRaporuVerilmeNedeni"><b>Verilme Nedeni:</b></label>
+			<input type="text" id="saglikRaporuVerilmeNedeni" name="saglikRaporuVerilmeNedeni" placeholder="N/A">
+			<br><br>
+			<h3><u>Hastanın;</u></h3>
+			<label for="saglikRaporuVatandaslikNo"><b>Vatandaşlık Numarası:</b></label>
+			<input type="text" id="saglikRaporuVatandaslikNo" name="saglikRaporuVatandaslikNo" placeholder="N/A" maxlength="8">
+			<label for="saglikRaporuAdSoyad"><b>Ad / Soyad:</b></label>
+			<input type="text" id="saglikRaporuAdSoyad" name="saglikRaporuAdSoyad" placeholder="Susan Rowan"><br><br>
+			<label for="saglikRaporuDogumTarihi"><b>Yaş:</b></label>
+			<input type="number" id="saglikRaporuDogumTarihi" name="saglikRaporuDogumTarihi">
+			<label for="saglikRaporuCinsiyet"><b>Cinsiyeti:</b></label>
+			<select id="saglikRaporuCinsiyet" name="hastanin_cinsiyet_secenekleri" form="saglik-raporu-sablonu">
+				<option value="Erkek">Erkek</option>
+				<option value="Kadın">Kadın</option>
+				<option value="Diğer">Diğer</option>	
+			</select>
+			<hr>
+			<h3><u>TANIMLAR;</u></h3>
+			<textarea id="saglikRaporuTanimlar" form="saglik-raporu-sablonu" rows="4" cols="100" placeholder="N/A Örnek: GENEL TIBBİ MUAYENE"></textarea>
+			<hr>
+			<h3><u>AÇIKLAMA;</u></h3>
+			<textarea id="saglikRaporuAciklama" form="saglik-raporu-sablonu" rows="4" cols="100" placeholder="N/A Örnek: Los Santos Polis Departmanına yapılacak ... başvurusu için kullanılacaktır."></textarea>
+			<hr>
+			<h3><u>KARAR;</u></h3>
+			<textarea id="saglikRaporuKarar" form="saglik-raporu-sablonu" rows="4" cols="100" placeholder="N/A Örnek: .............. isimli kişinin yapılan genel muayenesinde doğa yürüyüşü yapmasında sağlık açısından bir sorun yoktur. (Altına da tarih.)"></textarea>
+			<hr>
+			<h3><u>Doktorun;</u></h3>
+			<label for="saglikRaporuPersonelAdSoyad"><b>Unvanı, Adı ve Soyadı:</b></label>
+			<input type="text" id="saglikRaporuPersonelAdSoyad" name="saglikRaporuPersonelAdSoyad" placeholder="Dr. Susan Rowan">
+			<br><br>
+			<label for="saglikRaporuPersonelImza"><b>İmza/Kaşe:</b></label>
+			<input type="text" id="saglikRaporuPersonelImza" name="saglikRaporuPersonelImza" placeholder="[img]https://i.hizliresim.com/NN6jSa.png[/img]" style="width: 35%;">
+			<input type="reset" class="tasarim_button" value="FORMU TEMİZLE" style="width: 15%;">
+			<br><br>
+			<span>((Hasta kayıtının altına ve sağlık raporu verilen oyuncuya Forum PM olarak atılıyor.))</span>
+		</form>
+<br>
+<button class="tasarim_button" onclick="saglikRaporuVerileriYazdir()">YAZDIR</button>
+<h5>Yazdır'a bastıktan sonra aşağıdaki kutuya tıklayarak, kopyalayınız.</h5>
+<pre contenteditable="true" class="olusan_sablon" onclick="selectAllForm()">
+[div style="padding:10px; border:1px solid #e2e2e2"]
+[center]
+[table]
+[tr]
+[td]    [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853353894184484865/lsmd_asgh2.png[/img][/td]
+[td]             [/td]
+[td]
+
+[div style="padding:10px; border-left:5px solid #89b5dd; border-right:5px solid #89b5dd;"]
+
+
+[center][size=18pt][b]SAĞLIK RAPORU[/b][/size][/center]
+
+
+[/td]
+[td]             [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853276763484323870/hgh_logo.png[/img][/td]
+[td]    [/td]
+[/tr]
+[/table]
+[/center]
+[hr]
+
+[b][u][size=12pt]Verilme Nedeni:[/size][/u][/b] <span id="span_saglikRaporuVerilmeNedeni">N/A</span>
+
+[hr]
+
+[b][u][size=12pt]Hastanın;[/size][/u][/b]
+
+[b]Vatandaşlık Numarası:[/b] <span id="span_saglikRaporuVatandaslikNo">N/A</span>
+[hr]
+[b]Adı ve Soyadı:[/b] <span id="span_saglikRaporuAdSoyad">N/A</span>
+[hr]
+[b]Yaş:[/b] <span id="span_saglikRaporuDogumTarihi">N/A</span>
+[hr]
+[b]Cinsiyeti:[/b] <span id="span_saglikRaporuCinsiyet">N/A</span>
+[hr]
+
+[b][u][size=12pt]TANIMLAR:[/size][/u][/b]
+
+<span id="span_saglikRaporuTanimlar">N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A</span>
+
+[hr]
+
+[b][u][size=12pt]AÇIKLAMA:[/size][/u][/b]
+
+<span id="span_saglikRaporuAciklama">N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A</span>
+
+[hr]
+
+[b][u][size=12pt]KARAR:[/size][/u][/b]
+
+<span id="span_saglikRaporuKarar">N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A</span>
+
+[hr]
+[b][u][size=12pt]Doktorun;[/size][/u][/b]
+
+[b]Unvanı, Adı ve Soyadı:[/b] <span id="span_saglikRaporuPersonelAdSoyad">N/A</span>
+
+[right][b]İmza/Kaşe: [/b]<span id="span_saglikRaporuPersonelImza">N/A</span>[/right]
+[/div]
+</pre>
+	</div>
+<script src="../src/js/master.js"></script>
+</body>
+</html>

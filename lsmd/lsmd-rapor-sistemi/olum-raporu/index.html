@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="LSMD Rapor Sistemi">
+	<meta name="author" content="dreps#5646">
+	<link rel="stylesheet" href="../src/css/master.css">
+	<link rel="icon" type="image/gif/png" href="https://cdn.discordapp.com/attachments/780839923824590849/853354765521780776/lsmd_asgh.png">
+	<title>LSMD Rapor Sistemi</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="..">ANA SAYFA</a></li>
+			<li><a href="../hasta-kayit">HASTA KAYIT</a></li>
+			<li><a href="../ems-rapor">EMS RAPOR</a></li>
+			<li><a href="../recete">REÇETE</a></li>
+			<li><a href="../ameliyat-raporu">AMELİYAT RAPORU</a></li>
+			<li><a href="../psikoloji-raporu">PSİKOLOJİ RAPORU</a></li>
+			<li><a href="../darp-raporu">DARP RAPORU</a></li>
+			<li><a href="../saglik-raporu">SAĞLIK RAPORU</a></li>
+			<li><a href="../istirahat-raporu">İSTİRAHAT RAPORU</a></li>
+			<li><a href="../dogum-raporu">DOĞUM RAPORU</a></li>
+			<li><a href="../olum-raporu" class="active">ÖLÜM RAPORU</a></li>
+			<li><a href="../otopsi-raporu">OTOPSİ RAPORU</a></li>
+		</ul>
+	</nav>
+	<div class="olum-raporuIMG" align="center">
+		<img src="../src/img/olum-raporu.jpg" alt="Ölüm Raporu">
+	</div>
+	<div class="olum-raporuContainer">
+		<form id="olum-raporu-sablonu">
+			<label for="olumRaporuMeydanYeri"><b>Ölümün Meydana Geldiği Yer:</b></label>
+			<input type="text" id="olumRaporuMeydanYeri" name="olumRaporuMeydanYeri" placeholder="N/A">
+			<br><br>
+			<label for="olumRaporuTespitKurum"><b>Ölümü Tespit Eden Kurum Adı:</b></label>
+			<input type="text" id="olumRaporuTespitKurum" name="olumRaporuTespitKurum" placeholder="N/A">
+			<hr>
+			<center><h3><u>Ölen Kişi Bilgileri</u></h3></center>
+			<label for="olumRaporuVatandaslikNo"><b>Vatandaşlık Numarası:</b></label>
+			<input type="text" id="olumRaporuVatandaslikNo" name="olumRaporuVatandaslikNo" placeholder="N/A" maxlength="8">
+			<label for="olumRaporuAdSoyad"><b>Ad / Soyad:</b></label>
+			<input type="text" id="olumRaporuAdSoyad" name="olumRaporuAdSoyad" placeholder="Susan Rowan"><br><br>
+			<label for="olumRaporDogumTarihi"><b>Yaş:</b></label>
+			<input type="number" id="olumRaporDogumTarihi" name="olumRaporDogumTarihi">
+			<label for="olumRaporuCinsiyet"><b>Cinsiyeti:</b></label>
+			<select id="olumRaporuCinsiyet" name="hastanin_cinsiyet_secenekleri" form="olum-raporu-sablonu">
+				<option value="Erkek">Erkek</option>
+				<option value="Kadın">Kadın</option>
+				<option value="Diğer">Diğer</option>	
+			</select>
+			<br><br>
+			<label for="olumRaporuSebep"><b>Ölüm Sebebi:</b></label>
+			<input type="text" id="olumRaporuSebep" name="olumRaporuSebep" placeholder="N/A" style="width: 100%;">
+			<br><br>
+			<label for="olumRaporOlumTarihi"><b>Ölüm Tarihi:</b></label>
+			<input type="date" id="olumRaporOlumTarihi" name="olumRaporOlumTarihi">
+			<label for="olumRaporuOlumYeri"><b>Ölüm Yeri:</b></label>
+			<select id="olumRaporuOlumYeri" name="hastanin_olum_yeri" form="olum-raporu-sablonu">
+				<option value="Ev [X]<br />Hastane [ ]<br />İş Yeri [ ]<br />Ambulans [ ]">Ev</option>
+				<option value="Ev [ ]<br />Hastane [X]<br />İş Yeri [ ]<br />Ambulans [ ]">Hastane</option>
+				<option value="Ev [ ]<br />Hastane [ ]<br />İş Yeri [X]<br />Ambulans [ ]">İş Yeri</option>	
+				<option value="Ev [ ]<br />Hastane [ ]<br />İş Yeri [ ]<br />Ambulans [X]">Ambulans</option>	
+				<option value="Ev [ ]<br />Hastane [ ]<br />İş Yeri [ ]<br />Ambulans [ ]">Diğer</option>	
+			</select>
+			<label for="olumRaporuOlumYeriDiger"><b>Diğer:</b></label>
+			<input type="text" id="olumRaporuOlumYeriDiger" name="olumRaporuOlumYeriDiger" placeholder="'Diğer' seçeneği için.">
+			<br><br>
+			<label for="olumRaporuOlumSekli"><b>Ölümün Şekli:</b></label>
+			<select id="olumRaporuOlumSekli" name="hastanin_olum_sekli" form="olum-raporu-sablonu">
+				<option value="Bulaşıcı Olmayan Hastalık(Doğal Ölüm) [X]<br />Bulaşıcı Hastalık(Diğer Ölüm) [ ]<br />Bulaşıcı Olmayan Hastalık(Adli Olay) [ ]<br />Bulaşıcı Hastalık(Adli Olay) [ ]">Bulaşıcı Olmayan Hastalık (Doğal Ölüm)</option>
+				<option value="Bulaşıcı Olmayan Hastalık(Doğal Ölüm) [ ]<br />Bulaşıcı Hastalık(Diğer Ölüm) [X]<br />Bulaşıcı Olmayan Hastalık(Adli Olay) [ ]<br />Bulaşıcı Hastalık(Adli Olay) [ ]">Bulaşıcı Hastalık (Diğer Ölüm)</option>
+				<option value="Bulaşıcı Olmayan Hastalık(Doğal Ölüm) [ ]<br />Bulaşıcı Hastalık(Diğer Ölüm) [ ]<br />Bulaşıcı Olmayan Hastalık(Adli Olay) [X]<br />Bulaşıcı Hastalık(Adli Olay) [ ]">Bulaşıcı Olmayan Hastalık (Adli Olay)</option>	
+				<option value="Bulaşıcı Olmayan Hastalık(Doğal Ölüm) [ ]<br />Bulaşıcı Hastalık(Diğer Ölüm) [ ]<br />Bulaşıcı Olmayan Hastalık(Adli Olay) [ ]<br />Bulaşıcı Hastalık(Adli Olay) [X]">Bulaşıcı Hastalık (Adli Olay)</option>	
+			</select>
+			<br><br>
+			<label for="olumRaporuOlumGerceklesme"><b>Ölüm yaralanma sonucu mu gerçekleşti:</b></label>
+			<select id="olumRaporuOlumGerceklesme" name="hastanin_olum_gerceklesmesi" form="olum-raporu-sablonu">
+				<option value="Evet [X] - Hayır [ ]">Evet</option>
+				<option value="Evet [ ] - Hayır [X]">Hayır</option>	
+			</select>
+			<br><br>
+			<label for="olumRaporuYaralanmaYeri"><b>Yaralanma Yeri:</b></label>
+			<select id="olumRaporuYaralanmaYeri" name="hastanin_yaralanma_yeri" form="olum-raporu-sablonu">
+				<option value="Ev [X] - İş Yeri [ ] - Kırsal Alan [ ] - Spor Alanı [ ] - Cadde ve Otoyol [ ] - Kapalı Mekan [ ] - Kamu Kurumu [ ] - Hastane [ ]">Ev</option>
+				<option value="Ev [ ] - İş Yeri [X] - Kırsal Alan [ ] - Spor Alanı [ ] - Cadde ve Otoyol [ ] - Kapalı Mekan [ ] - Kamu Kurumu [ ] - Hastane [ ]">İş Yeri</option>	
+				<option value="Ev [ ] - İş Yeri [ ] - Kırsal Alan [X] - Spor Alanı [ ] - Cadde ve Otoyol [ ] - Kapalı Mekan [ ] - Kamu Kurumu [ ] - Hastane [ ]">Kırsal Alan</option>	
+				<option value="Ev [ ] - İş Yeri [ ] - Kırsal Alan [ ] - Spor Alanı [X] - Cadde ve Otoyol [ ] - Kapalı Mekan [ ] - Kamu Kurumu [ ] - Hastane [ ]">Spor Alanı</option>	
+				<option value="Ev [ ] - İş Yeri [ ] - Kırsal Alan [ ] - Spor Alanı [ ] - Cadde ve Otoyol [X] - Kapalı Mekan [ ] - Kamu Kurumu [ ] - Hastane [ ]">Cadde ve Otoyol</option>	
+				<option value="Ev [ ] - İş Yeri [ ] - Kırsal Alan [ ] - Spor Alanı [ ] - Cadde ve Otoyol [ ] - Kapalı Mekan [X] - Kamu Kurumu [ ] - Hastane [ ]">Kapalı Mekan</option>	
+				<option value="Ev [ ] - İş Yeri [ ] - Kırsal Alan [ ] - Spor Alanı [ ] - Cadde ve Otoyol [ ] - Kapalı Mekan [ ] - Kamu Kurumu [X] - Hastane [ ]">Kamu Kurumu</option>	
+				<option value="Ev [ ] - İş Yeri [ ] - Kırsal Alan [ ] - Spor Alanı [ ] - Cadde ve Otoyol [ ] - Kapalı Mekan [ ] - Kamu Kurumu [ ] - Hastane [X]">Hastane</option>	
+				<option value="Ev [ ] - İş Yeri [ ] - Kırsal Alan [ ] - Spor Alanı [ ] - Cadde ve Otoyol [ ] - Kapalı Mekan [ ] - Kamu Kurumu [ ] - Hastane [ ]">Diğer</option>	
+			</select>
+			<label for="olumRaporuYaralanmaYeriDiger"><b>Diğer:</b></label>
+			<input type="text" id="olumRaporuYaralanmaYeriDiger" name="olumRaporuYaralanmaYeriDiger" placeholder="'Diğer' seçeneği için.">
+			<br><br>
+			<label for="olumRaporuOtopsiYapildi"><b>Otopsisi Yapıldı:</b></label>
+			<select id="olumRaporuOtopsiYapildi" name="hastanin_otopsisi_yapildi" form="olum-raporu-sablonu">
+				<option value="Evet [X] - Hayır [ ]">Evet</option>
+				<option value="Evet [ ] - Hayır [X]">Hayır</option>	
+			</select>
+			<hr>
+			<h3><u>Doktorun;</u></h3>
+			<label for="olumRaporuPersonelAdSoyad"><b>Unvanı, Adı ve Soyadı:</b></label>
+			<input type="text" id="olumRaporuPersonelAdSoyad" name="olumRaporuPersonelAdSoyad" placeholder="Dr. Susan Rowan">
+			<br><br>
+			<label for="olumRaporuPersonelImza"><b>İmza/Kaşe:</b></label>
+			<input type="text" id="olumRaporuPersonelImza" name="olumRaporuPersonelImza" placeholder="[img]https://i.hizliresim.com/NN6jSa.png[/img]" style="width: 35%;">
+			<input type="reset" class="tasarim_button" value="FORMU TEMİZLE" style="width: 15%;">
+			<br><br>
+			<span>((Hasta kayıtının altına ve ölüm raporu verilen oyuncuya Forum PM olarak atılıyor.))</span>
+		</form>
+<br>
+<button class="tasarim_button" onclick="olumRaporuVerileriYazdir()">YAZDIR</button>
+<h5>Yazdır'a bastıktan sonra aşağıdaki kutuya tıklayarak, kopyalayınız.</h5>
+<pre contenteditable="true" class="olusan_sablon" onclick="selectAllForm()">
+[div style="padding:10px; border:1px solid #e2e2e2"]
+[center]
+[table]
+[tr]
+[td]    [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853353894184484865/lsmd_asgh2.png[/img][/td]
+[td]             [/td]
+[td]
+
+[div style="padding:10px; border-left:5px solid #89b5dd; border-right:5px solid #89b5dd;"]
+
+
+[center][size=18pt][b]ÖLÜM BELGESİ/RAPORU[/b][/size][/center]
+
+
+[/td]
+[td]             [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853276763484323870/hgh_logo.png[/img][/td]
+[td]    [/td]
+[/tr]
+[/table]
+[/center]
+[hr]
+[b]Ölümün Meydana Geldiği Yer:[/b] <span id="span_olumRaporuMeydanYeri">N/A</span>
+[b]Ölümü Tespit Eden Kurum Adı:[/b] <span id="span_olumRaporuTespitKurum">N/A</span>
+[hr]
+
+[center][b][u][size=12pt]Ölen Kişi Bilgileri[/size][/u][/b][/center]
+
+[b]Vatandaşlık Numarası:[/b] <span id="span_olumRaporuVatandaslikNo">N/A</span>
+
+[b]Adı ve Soyadı:[/b] <span id="span_olumRaporuAdSoyad">N/A</span>
+
+[b]Yaş:[/b] <span id="span_olumRaporDogumTarihi">N/A</span>
+
+[b]Cinsiyet:[/b] <span id="span_olumRaporuCinsiyet">N/A</span>
+
+[b]Ölüm Sebebi:[/b] <span id="span_olumRaporuSebep">N/A</span>
+
+[b]Ölüm Tarihi:[/b] <span id="span_olumRaporOlumTarihi">GG.AA.YYYY</span>
+
+[b]Ölüm Yeri:[/b]
+<span id="span_olumRaporuOlumYeri">N/A</span>
+Diğer [ <span id="span_olumRaporuOlumYeriDiger">N/A</span> ]
+
+[b]Ölümün Şekli:[/b]
+<span id="span_olumRaporuOlumSekli">N/A</span>
+
+[b]Ölüm yaralanma sonucu mu gerçekleşti:[/b] <span id="span_olumRaporuOlumGerceklesme">Evet [ ] - Hayır [ ]</span>
+
+[b]Yaralanma Yeri:[/b] <span id="span_olumRaporuYaralanmaYeri">N/A</span> - Diğer [ <span id="span_olumRaporuYaralanmaYeriDiger">X</span> ]
+
+[b]Otopsisi Yapıldı:[/b] <span id="span_olumRaporuOtopsiYapildi">Evet [ ] - Hayır [ ]</span>
+
+[hr]
+
+[b][u][size=12pt]Doktorun;[/size][/u][/b]
+
+[b]Unvanı, Adı ve Soyadı:[/b] <span id="span_olumRaporuPersonelAdSoyad">N/A</span>
+
+[right][b]İmza/Kaşe: [/b]<span id="span_olumRaporuPersonelImza">N/A</span>[/right]
+
+[/div]
+</pre>
+	</div>
+<script src="../src/js/master.js"></script>
+</body>
+</html>

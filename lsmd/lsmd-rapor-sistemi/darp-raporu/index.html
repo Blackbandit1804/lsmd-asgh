@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="LSMD Rapor Sistemi">
+	<meta name="author" content="dreps#5646">
+	<link rel="stylesheet" href="../src/css/master.css">
+	<link rel="icon" type="image/gif/png" href="https://cdn.discordapp.com/attachments/780839923824590849/853354765521780776/lsmd_asgh.png">
+	<title>LSMD Rapor Sistemi</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="..">ANA SAYFA</a></li>
+			<li><a href="../hasta-kayit">HASTA KAYIT</a></li>
+			<li><a href="../ems-rapor">EMS RAPOR</a></li>
+			<li><a href="../recete">REÇETE</a></li>
+			<li><a href="../ameliyat-raporu">AMELİYAT RAPORU</a></li>
+			<li><a href="../psikoloji-raporu">PSİKOLOJİ RAPORU</a></li>
+			<li><a href="../darp-raporu" class="active">DARP RAPORU</a></li>
+			<li><a href="../saglik-raporu">SAĞLIK RAPORU</a></li>
+			<li><a href="../istirahat-raporu">İSTİRAHAT RAPORU</a></li>
+			<li><a href="../dogum-raporu">DOĞUM RAPORU</a></li>
+			<li><a href="../olum-raporu">ÖLÜM RAPORU</a></li>
+			<li><a href="../otopsi-raporu">OTOPSİ RAPORU</a></li>
+		</ul>
+	</nav>
+	<div class="darp-raporuIMG" align="center">
+		<img src="../src/img/darp-raporu.jpg" alt="Darp Raporu">
+	</div>
+	<div class="darp-raporuContainer">
+		<form id="darp-raporu-sablonu">
+			<label for="darpRaporuTarih"><b>Rapor Tarihi ve Saati:</b></label>
+			<input type="date" id="darpRaporuTarih" name="darpRaporuTarih">
+			<input type="time" id="darpRaporuSaat" name="darpRaporuSaat">
+			<h3><u>Muayene Edilenin;</u></h3>
+			<label for="darpRaporuVatandaslikNo"><b>Vatandaşlık Numarası:</b></label>
+			<input type="text" id="darpRaporuVatandaslikNo" name="darpRaporuVatandaslikNo" placeholder="N/A" maxlength="8">
+			<label for="darpRaporuAdSoyad"><b>Ad / Soyad:</b></label>
+			<input type="text" id="darpRaporuAdSoyad" name="darpRaporuAdSoyad" placeholder="Jacob Ward"><br><br>
+			<label for="darpRaporuDogumTarihi"><b>Doğum Yeri ve Yaşı:</b></label>
+			<input type="text" id="darpRaporuDogumTarihi" name="darpRaporuDogumTarihi" placeholder="N/A - N/A">
+			<label for="darpRaporuCinsiyet"><b>Cinsiyeti:</b></label>
+			<select id="darpRaporuCinsiyet" name="hastanin_cinsiyet_secenekleri" form="darp-raporu-sablonu">
+				<option value="Erkek">Erkek</option>
+				<option value="Kadın">Kadın</option>
+				<option value="Diğer">Diğer</option>	
+			</select>
+			<hr>
+			<h3><u>Olayla İlgili Bilgiler;</u></h3>
+			Bu bölümdeki bilgileri, muayeneye getirilen kişilerin bilgilerine göre doldurunuz.
+			<br>
+			<u>Tarih ve saat bilgilerini belirtmeyi unutmayınız.</u>
+			<hr>
+			<label for="darpRaporuOyku"><b>Olayın Öyküsü:</b></label>
+			<input type="text" id="darpRaporuOyku" name="darpRaporuOyku" placeholder="N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A" style="width: 100%;">
+			<br><hr>
+			<label for="darpRaporuSikayet"><b>Muayene Edilenin Şikayetleri:</b></label>
+			<input type="text" id="darpRaporuSikayet" name="darpRaporuSikayet" placeholder="N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A" style="width: 100%;">
+			<br><hr>
+			<label for="darpRaporuOzgecmis"><b>Tıbbi Özgeçmişi:</b></label>
+			<input type="text" id="darpRaporuOzgecmis" name="darpRaporuOzgecmis" placeholder="N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A" style="width: 100%;">
+			<br><hr>
+			<label for="darpRaporuBulgular"><b>Muayene Bulguları:</b></label>
+			<input type="text" id="darpRaporuBulgular" name="darpRaporuBulgular" placeholder="N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A" style="width: 100%;">
+			<hr>
+			<h3><u>Doktorun;</u></h3>
+			<label for="darpRaporuPersonelAdSoyad"><b>Unvanı, Adı ve Soyadı:</b></label>
+			<input type="text" id="darpRaporuPersonelAdSoyad" name="darpRaporuPersonelAdSoyad" placeholder="Dr. Susan Rowan">
+			<br><br>
+			<label for="darpRaporuPersonelImza"><b>İmza/Kaşe:</b></label>
+			<input type="text" id="darpRaporuPersonelImza" name="darpRaporuPersonelImza" placeholder="[img]https://i.hizliresim.com/NN6jSa.png[/img]" style="width: 35%;">
+			<input type="reset" class="tasarim_button" value="FORMU TEMİZLE" style="width: 15%;">
+			<br><br>
+			<span>((Hasta kayıtının altına ve darp raporu verilen oyuncuya Forum PM olarak atılıyor.))</span>
+		</form>
+<br>
+<button class="tasarim_button" onclick="darpRaporuVerileriYazdir()">YAZDIR</button>
+<h5>Yazdır'a bastıktan sonra aşağıdaki kutuya tıklayarak, kopyalayınız.</h5>
+<pre contenteditable="true" class="olusan_sablon" onclick="selectAllForm()">
+[div style="padding:10px; border:1px solid #e2e2e2"]
+[center]
+[table]
+[tr]
+[td]    [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853353894184484865/lsmd_asgh2.png[/img][/td]
+[td]             [/td]
+[td]
+[div style="padding:10px; border-left:5px solid #89b5dd; border-right:5px solid #89b5dd;"]
+
+
+[center][size=18pt][b]ADLİ MUAYENE/DARP RAPORU[/b][/size][/center]
+
+
+[/td]
+[td]             [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853276763484323870/hgh_logo.png[/img][/td]
+[td]    [/td]
+[/tr]
+[/table]
+[/center]
+[hr]
+[b]Rapor Tarihi ve Saati:[/b] <span id="span_darpRaporuTarih">GG.AA.YYYY</span> - <span id="span_darpRaporuSaat">SS.DD</span>
+[hr]
+[b][u][size=12pt]Muayene Edilenin;[/size][/u][/b]
+
+[b]Vatandaşlık Numarası:[/b] <span id="span_darpRaporuVatandaslikNo">N/A</span>
+[hr]
+[b]Adı ve Soyadı:[/b] <span id="span_darpRaporuAdSoyad">N/A</span>
+[hr]
+[b]Doğum Yeri ve Yaşı:[/b] <span id="span_darpRaporuDogumTarihi">N/A - N/A</span>
+[hr]
+[b]Cinsiyeti:[/b] <span id="span_darpRaporuCinsiyet">N/A</span>
+[hr]
+[b][u][size=12pt]Olayla İlgili Bilgiler;[/size][/u][/b]
+Bu bölümdeki bilgileri, muayeneye getirilen kişilerin bilgilerine göre doldurunuz.
+[u]Tarih ve saat bilgilerini belirtmeyi unutmayınız.[/u]
+[hr]
+[b]Olayın Öyküsü:[/b] Darp
+
+<span id="span_darpRaporuOyku">N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A</span>
+
+[hr]
+[b]Muayene Edilenin Şikayetleri:[/b]
+
+<span id="span_darpRaporuSikayet">N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A</span>
+
+[hr]
+[b]Tıbbi Özgeçmişi;[/b]
+
+<span id="span_darpRaporuOzgecmis">N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A</span>
+
+[hr]
+
+[b]Muayene Bulguları;[/b]
+
+<span id="span_darpRaporuBulgular">N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A</span>
+
+[hr]
+
+[b][u][size=12pt]Doktorun;[/size][/u][/b]
+
+[b]Unvanı, Adı ve Soyadı:[/b] <span id="span_darpRaporuPersonelAdSoyad">N/A</span>
+
+[right][b]İmza/Kaşe: [/b]<span id="span_darpRaporuPersonelImza">N/A</span>[/right]
+
+[/div]
+</pre>
+	</div>
+<script src="../src/js/master.js"></script>
+</body>
+</html>

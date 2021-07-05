@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="LSMD Rapor Sistemi">
+	<meta name="author" content="dreps#5646">
+	<link rel="stylesheet" href="../src/css/master.css">
+	<link rel="icon" type="image/gif/png" href="https://cdn.discordapp.com/attachments/780839923824590849/853354765521780776/lsmd_asgh.png">
+	<title>LSMD Rapor Sistemi</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="..">ANA SAYFA</a></li>
+			<li><a href="../hasta-kayit">HASTA KAYIT</a></li>
+			<li><a href="../ems-rapor">EMS RAPOR</a></li>
+			<li><a href="../recete">REÇETE</a></li>
+			<li><a href="../ameliyat-raporu">AMELİYAT RAPORU</a></li>
+			<li><a href="../psikoloji-raporu" class="active">PSİKOLOJİ RAPORU</a></li>
+			<li><a href="../darp-raporu">DARP RAPORU</a></li>
+			<li><a href="../saglik-raporu">SAĞLIK RAPORU</a></li>
+			<li><a href="../istirahat-raporu">İSTİRAHAT RAPORU</a></li>
+			<li><a href="../dogum-raporu">DOĞUM RAPORU</a></li>
+			<li><a href="../olum-raporu">ÖLÜM RAPORU</a></li>
+			<li><a href="../otopsi-raporu">OTOPSİ RAPORU</a></li>
+		</ul>
+	</nav>
+	<div class="psikoloji-raporuIMG" align="center">
+		<img src="../src/img/psikoloji-raporu.jpg" alt="Psikoloji Raporu">
+	</div>
+	<div class="psikoloji-raporuContainer">
+		<form id="psikoloji-raporu-sablonu">
+			<h3><u>Hastanın;</u></h3>
+			<label for="psikolojiRaporuAdSoyad"><b>Ad / Soyad:</b></label>
+			<input type="text" id="psikolojiRaporuAdSoyad" name="psikolojiRaporuAdSoyad" placeholder="Susan Rowan">
+			<label for="psikolojiRaporuDogumTarihi"><b>Yaş:</b></label>
+			<input type="number" id="psikolojiRaporuDogumTarihi" name="psikolojiRaporuDogumTarihi">
+			<br><br>
+			<label for="psikolojiRaporuCinsiyet"><b>Cinsiyeti:</b></label>
+			<select id="psikolojiRaporuCinsiyet" name="hastanin_cinsiyet_secenekleri" form="psikoloji-raporu-sablonu">
+				<option value="Erkek">Erkek</option>
+				<option value="Kadın">Kadın</option>
+				<option value="Diğer">Diğer</option>	
+			</select>
+			<label for="psikolojiRaporuTarih"><b>Rapor Tarihi:</b></label>
+			<input type="date" id="psikolojiRaporuTarih" name="psikolojiRaporuTarih">
+			<br><br>
+			<label for="psikolojiRaporuTetkik"><b>Yapılan Tetkik:</b></label>
+			<input type="text" id="psikolojiRaporuTetkik" name="psikolojiRaporuTetkik" placeholder="N/A" style="width: 25%;">
+			<hr>
+			<label for="psikolojiRaporuSonuc"><b>SONUÇ:</b></label>
+			<input type="text" id="psikolojiRaporuSonuc" name="psikolojiRaporuSonuc" placeholder="N/A" style="width: 100%;">
+			<hr>
+			<h3><u>Doktorun;</u></h3>
+			<label for="psikolojiRaporuPersonelAdSoyad"><b>Unvanı, Adı ve Soyadı:</b></label>
+			<input type="text" id="psikolojiRaporuPersonelAdSoyad" name="psikolojiRaporuPersonelAdSoyad" placeholder="Prof. Dr. Quinn Mitchell">
+			<br><br>
+			<label for="psikolojiRaporuPersonelImza"><b>İmza/Kaşe:</b></label>
+			<input type="text" id="psikolojiRaporuPersonelImza" name="psikolojiRaporuPersonelImza" placeholder="[img]https://i.hizliresim.com/NN6jSa.png[/img]" style="width: 35%;">
+			<input type="reset" class="tasarim_button" value="FORMU TEMİZLE" style="width: 15%;">
+			<br><br>
+			<span>((Hasta kayıtının altına ve psikoloji raporu verilen oyuncuya Forum PM olarak atılıyor.))</span>
+		</form>
+<br>
+<button class="tasarim_button" onclick="psikolojiRaporuVerileriYazdir()">YAZDIR</button>
+<h5>Yazdır'a bastıktan sonra aşağıdaki kutuya tıklayarak, kopyalayınız.</h5>
+<pre contenteditable="true" class="olusan_sablon" onclick="selectAllForm()">
+[div style="padding:10px; border:1px solid #e2e2e2"]
+[center]
+[table]
+[tr]
+[td]    [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853353894184484865/lsmd_asgh2.png[/img][/td]
+[td]             [/td]
+[td]
+
+[div style="padding:10px; border-left:5px solid #89b5dd; border-right:5px solid #89b5dd;"]
+
+
+[center][size=18pt][b]PSİKOLOJİ RAPORU[/b][/size][/center]
+
+
+[/td]
+[td]             [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853276763484323870/hgh_logo.png[/img][/td]
+[td]    [/td]
+[/tr]
+[/table]
+[/center]
+[hr]
+
+[b][u][size=12pt]Hastanın;[/size][/u][/b]
+
+[b]Adı ve Soyadı:[/b] <span id="span_psikolojiRaporuAdSoyad">N/A</span>
+
+[b]Yaş:[/b] <span id="span_psikolojiRaporuDogumTarihi">N/A</span>
+
+[b]Cinsiyeti:[/b] <span id="span_psikolojiRaporuCinsiyet">N/A</span>
+
+[b]Rapor Tarihi:[/b] <span id="span_psikolojiRaporuTarih">YYYY.AA.GG</span>
+
+[b]Yapılan Tetkik:[/b] <span id="span_psikolojiRaporuTetkik">N/A</span>
+
+[hr]
+
+[b][u][size=12pt]SONUÇ:[/size][/u][/b] <span id="span_psikolojiRaporuSonuc">N/A</span>
+
+[hr]
+
+[b][u][size=12pt]Doktorun;[/size][/u][/b]
+
+[b]Unvanı, Adı ve Soyadı:[/b] <span id="span_psikolojiRaporuPersonelAdSoyad">N/A</span>
+
+[right][b]İmza/Kaşe: [/b]<span id="span_psikolojiRaporuPersonelImza">N/A</span>[/right]
+
+[/div]
+</pre>
+	</div>
+<script src="../src/js/master.js"></script>
+</body>
+</html>

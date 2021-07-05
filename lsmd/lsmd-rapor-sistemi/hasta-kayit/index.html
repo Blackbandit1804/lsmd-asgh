@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="LSMD Rapor Sistemi">
+	<meta name="author" content="dreps#5646">
+	<link rel="stylesheet" href="../src/css/master.css">
+	<link rel="icon" type="image/gif/png" href="https://cdn.discordapp.com/attachments/780839923824590849/853354765521780776/lsmd_asgh.png">
+	<title>LSMD Rapor Sistemi</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="..">ANA SAYFA</a></li>
+			<li><a href="../hasta-kayit" class="active">HASTA KAYIT</a></li>
+			<li><a href="../ems-rapor">EMS RAPOR</a></li>
+			<li><a href="../recete">REÇETE</a></li>
+			<li><a href="../ameliyat-raporu">AMELİYAT RAPORU</a></li>
+			<li><a href="../psikoloji-raporu">PSİKOLOJİ RAPORU</a></li>
+			<li><a href="../darp-raporu">DARP RAPORU</a></li>
+			<li><a href="../saglik-raporu">SAĞLIK RAPORU</a></li>
+			<li><a href="../istirahat-raporu">İSTİRAHAT RAPORU</a></li>
+			<li><a href="../dogum-raporu">DOĞUM RAPORU</a></li>
+			<li><a href="../olum-raporu">ÖLÜM RAPORU</a></li>
+			<li><a href="../otopsi-raporu">OTOPSİ RAPORU</a></li>
+		</ul>
+	</nav>
+	<div class="hasta-kayitIMG" align="center">
+		<img src="../src/img/hasta-kayit.jpg" alt="Hasta Kayıt">
+	</div>
+	<div class="hasta-kayitContainer">
+		<form id="hasta-kayit-sablonu">
+			<h3><u>Hastanın;</u></h3>
+			<label for="hastaKayitVatandaslikNo"><b>Vatandaşlık Numarası:</b></label>
+			<input type="text" id="hastaKayitVatandaslikNo" name="hastaKayitVatandaslikNo" placeholder="N/A" maxlength="8">
+			<label for="hastaKayitAdSoyad"><b>Ad / Soyad:</b></label>
+			<input type="text" id="hastaKayitAdSoyad" name="hastaKayitAdSoyad" placeholder="Susan Rowan"><br><br>
+			<label for="hastaKayitDogumTarihi"><b>Yaş:</b></label>
+			<input type="number" id="hastaKayitDogumTarihi" name="hastaKayitDogumTarihi">
+			<label for="hastaKayitUyruk"><b>Uyruk / Köken:</b></label>
+			<input type="text" id="hastaKayitUyruk" name="hastaKayitUyruk" placeholder="ABD"><br><br>
+			<label for="hastaKayitCinsiyet"><b>Cinsiyet:</b></label>
+			<select id="hastaKayitCinsiyet" name="hastanin_cinsiyet_secenekleri" form="hasta-kayit-sablonu">
+				<option value="Erkek">Erkek</option>
+				<option value="Kadın">Kadın</option>
+				<option value="Diğer">Diğer</option>	
+			</select>
+			<label for="hastaKayitTelNo"><b>Telefon Numarası:</b></label>
+			<input type="tel" id="hastaKayitTelNo" name="hastaKayitTelNo" placeholder="123-456" maxlength="7"><br><br>
+			<label for="hastaKayitVaka"><b>Vaka / Şikayet:</b></label>
+			<input type="text" id="hastaKayitVaka" name="hastaKayitVaka" placeholder="GSW / MVA">
+			<label for="hastaKayitTeshis"><b>Ön Tanı / Teşhis:</b></label>
+			<input type="text" id="hastaKayitTeshis" name="hastaKayitTeshis" placeholder="N/A"><br><br>
+			<label for="hastaKayitHastaneyeUlasim"><b>Hastaneye Ulaşım Şekli:</b></label>
+			<select id="hastaKayitHastaneyeUlasim" name="hastanin_ulasim_secenekleri" form="hasta-kayit-sablonu">
+				<option value="EMS [X]<br />Kolluk Kuvvetleri [ ]<br />Özel Araç [ ]">EMS</option>
+				<option value="EMS [ ]<br />Kolluk Kuvvetleri [X]<br />Özel Araç [ ]">Kolluk Kuvvetleri</option>
+				<option value="EMS [ ]<br />Kolluk Kuvvetleri [ ]<br />Özel Araç [X]">Özel Araç</option>			
+			</select>
+			<label for="hastaKayitHastaneyeUlastiran"><b>Hastaneye Ulaştıran Kişi:</b></label>
+			<select id="hastaKayitHastaneyeUlastiran" name="hastanin_ulastiran_secenekleri" form="hasta-kayit-sablonu">
+				<option value="EMS [X]<br />Kolluk Kuvvetleri [ ]<br />Hasta Yakını [ ]<br />Şahsi Ulaşım [ ]">EMS</option>
+				<option value="EMS [ ]<br />Kolluk Kuvvetleri [X]<br />Hasta Yakını [ ]<br />Şahsi Ulaşım [ ]">Kolluk Kuvvetleri</option>
+				<option value="EMS [ ]<br />Kolluk Kuvvetleri [ ]<br />Hasta Yakını [X]<br />Şahsi Ulaşım [ ]">Hasta Yakını</option>
+				<option value="EMS [ ]<br />Kolluk Kuvvetleri [ ]<br />Hasta Yakını [ ]<br />Şahsi Ulaşım [X]">Şahsi Ulaşım</option>			
+			</select>
+		<hr>
+		<h3><u>Hastanenin;</u></h3>
+			<label for="hastaKayitTedaviBaslangicTarih"><b>Tedavi Başlangıç Tarihi ve Saati:</b></label>
+			<input type="date" id="hastaKayitTedaviBaslangicTarih" name="hastaKayitTedaviBaslangicTarih">
+			<input type="time" id="hastaKayitTedaviBaslangicSaat" name="hastaKayitTedaviBaslangicSaat">
+			<br><br>
+			<label for="hastaKayitTaburcuSevkTarih"><b>Taburcu/H. Sevk Tarihi ve Saati:</b></label>
+			<input type="date" id="hastaKayitTaburcuSevkTarih" name="hastaKayitTaburcuSevkTarih">
+			<input type="time" id="hastaKayitTaburcuSevkSaat" name="hastaKayitTaburcuSevkSaat">
+			<br><br>
+			<label for="hastaKayitHastaDurum"><b>Hastanın Durumu:</b></label>
+			<select id="hastaKayitHastaDurum" name="hastanin_durum_secenekleri" form="hasta-kayit-sablonu">
+				<option value="Polikliniğe / İlgili Birime Sevk Edildi [ ]<br />Tedavisi Devam Etmekte [ ]<br />Taburcu Edildi [X]<br />Başka Sağlık Kuruluşuna Sevk Edildi [ ]<br />EX [ ]">Taburcu Edildi</option>
+				<option value="Polikliniğe / İlgili Birime Sevk Edildi [X]<br />Tedavisi Devam Etmekte [ ]<br />Taburcu Edildi [ ]<br />Başka Sağlık Kuruluşuna Sevk Edildi [ ]<br />EX [ ]">Polikliniğe / İlgili Birime Sevk Edildi</option>
+				<option value="Polikliniğe / İlgili Birime Sevk Edildi [ ]<br />Tedavisi Devam Etmekte [X]<br />Taburcu Edildi [ ]<br />Başka Sağlık Kuruluşuna Sevk Edildi [ ]<br />EX [ ]">Tedavisi Devam Etmekte</option>
+				<option value="Polikliniğe / İlgili Birime Sevk Edildi [ ]<br />Tedavisi Devam Etmekte [ ]<br />Taburcu Edildi [ ]<br />Başka Sağlık Kuruluşuna Sevk Edildi [X]<br />EX [ ]">Başka Sağlık Kuruluşuna Sevk Edildi</option>		
+				<option value="Polikliniğe / İlgili Birime Sevk Edildi [ ]<br />Tedavisi Devam Etmekte [ ]<br />Taburcu Edildi [ ]<br />Başka Sağlık Kuruluşuna Sevk Edildi [ ]<br />EX [X]">EX</option>	
+			</select>
+		<hr>
+		<h3><u>Personelin;</u></h3>
+			<label for="hastaKayitPersonelAdSoyad"><b>Ad / Soyad:</b></label>
+			<input type="text" id="hastaKayitPersonelAdSoyad" name="hastaKayitPersonelAdSoyad" placeholder="Susan Rowan">
+			<label for="hastaKayitPersonelUnvan"><b>Unvanı:</b></label>
+			<input type="text" id="hastaKayitPersonelUnvan" name="hastaKayitPersonelUnvan" placeholder="Operatör Doktor"><br><br>
+			<label for="hastaKayitPersonelImza"><b>İmza:</b></label>
+			<input type="text" id="hastaKayitPersonelImza" name="hastaKayitPersonelImza" placeholder="[img]https://i.hizliresim.com/NN6jSa.png[/img]" style="width: 35%;">
+		<hr>
+		<h3><u>Faturalandırma ve Ücreti;</u></h3>
+			<label for="hastaKayitFatura"><b>Ücret:</b></label>
+			<input type="text" id="hastaKayitFatura" name="hastaKayitFatura" placeholder="Genel Cerrahi: N/A">
+			<input type="reset" class="tasarim_button" value="FORMU TEMİZLE" style="width: 15%;">
+			<br><br>
+		</form>
+<button class="tasarim_button" onclick="hastaKayitYeniKonuAc()" style="width: 15%;">YENİ KONU AÇ</button>
+<button class="tasarim_button" onclick="hastaKayitVerileriYazdir()">YAZDIR</button>
+<h5>Yazdır'a bastıktan sonra aşağıdaki kutuya tıklayarak, kopyalayınız.</h5>
+<h6>Açtığınız kayıtları discord'daki <span style="color: red;">#hasta-kayit</span> kanalına atmayı unutmayınız.</h6>
+<pre contenteditable="true" class="olusan_sablon" onclick="selectAllForm()">
+[div style="padding:10px; border:1px solid #e2e2e2"]
+[center]
+[table]
+[tr]
+[td]    [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853353894184484865/lsmd_asgh2.png[/img][/td]
+[td]             [/td]
+[td]
+
+[div style="padding:10px; border-left:5px solid #89b5dd; border-right:5px solid #89b5dd;"]
+
+
+[center][size=18pt][b]HASTA KAYIT FORMU[/b][/size][/center]
+
+
+[/td]
+[td]             [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853276763484323870/hgh_logo.png[/img][/td]
+[td]    [/td]
+[/tr]
+[/table]
+[/center]
+[hr]
+
+[b][u][size=12pt]Hastanın;[/size][/u][/b]
+
+[b]Vatandaşlık Numarası:[/b] <span id="span_hastaKayitVatandaslikNo">N/A</span>
+
+[b]Ad / Soyad:[/b] <span id="span_hastaKayitAdSoyad">N/A</span>
+
+[b]Yaş:[/b] <span id="span_hastaKayitDogumTarihi">N/A</span>
+
+[b]Uyruk / Köken:[/b] <span id="span_hastaKayitUyruk">N/A</span>
+
+[b]Cinsiyet:[/b] <span id="span_hastaKayitCinsiyet">N/A</span>
+
+[b]Telefon Numarası:[/b] <span id="span_hastaKayitTelNo">N/A</span>
+
+[b]Vaka / Şikayet:[/b] <span id="span_hastaKayitVaka">N/A</span>
+
+[b]Ön Tanı / Teşhis:[/b] <span id="span_hastaKayitTeshis">N/A</span>
+
+[b]Hastaneye Ulaşım Şekli:[/b] 
+<span id="span_hastaKayitHastaneyeUlasim"></span>
+
+[b]Hastaneye Ulaştıran Kişi:[/b]
+<span id="span_hastaKayitHastaneyeUlastiran"></span>
+
+[hr]
+
+[b][u][size=12pt]Hastanenin;[/size][/u][/b]
+
+[b]Tedavi Başlangıç Tarihi ve Saati:[/b] <span id="span_hastaKayitTedaviBaslangicTarih">YYYY.AA.GG</span> - <span id="span_hastaKayitTedaviBaslangicSaat">SS:DD</span>
+
+[b]Taburcu/H. Sevk Tarihi ve Saati:[/b] <span id="span_hastaKayitTaburcuSevkTarih">YYYY.AA.GG</span> - <span id="span_hastaKayitTaburcuSevkSaat">SS:DD</span>
+
+[b]Hastanın Durumu: [/b]
+<span id="span_hastaKayitHastaDurum"></span>
+
+[hr]
+
+[b][u][size=12pt]Personelin;[/size][/u][/b]
+
+[b]Adı ve Soyadı:[/b] <span id="span_hastaKayitPersonelAdSoyad">N/A</span>
+
+[b]Unvanı:[/b] <span id="span_hastaKayitPersonelUnvan">N/A</span>
+
+[right][b]İmza: [/b]<span id="span_hastaKayitPersonelImza">N/A</span>[/right]
+
+[hr]
+
+[b][u][size=12pt]Faturalandırma ve Ücreti;[/size][/u][/b]
+
+[tt][b]Ücret:[/b] <span id="span_hastaKayitFatura">N/A</span> [b]USD[/b][/tt]
+
+[b]Muhasebeci:[/b] James Money
+
+[right][b]İmza: [/b][img width=300 height=65]https://cdn.discordapp.com/attachments/696680870177931355/803609621646409728/money_signature.png[/img][/right]
+
+[/div]
+</pre>
+	</div>
+<script src="../src/js/master.js"></script>
+</body>
+</html>

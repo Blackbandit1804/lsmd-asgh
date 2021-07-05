@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="LSMD Rapor Sistemi">
+	<meta name="author" content="dreps#5646">
+	<link rel="stylesheet" href="../src/css/master.css">
+	<link rel="icon" type="image/gif/png" href="https://cdn.discordapp.com/attachments/780839923824590849/853354765521780776/lsmd_asgh.png">
+	<title>LSMD Rapor Sistemi</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="..">ANA SAYFA</a></li>
+			<li><a href="../hasta-kayit">HASTA KAYIT</a></li>
+			<li><a href="../ems-rapor">EMS RAPOR</a></li>
+			<li><a href="../recete">REÇETE</a></li>
+			<li><a href="../ameliyat-raporu">AMELİYAT RAPORU</a></li>
+			<li><a href="../psikoloji-raporu">PSİKOLOJİ RAPORU</a></li>
+			<li><a href="../darp-raporu">DARP RAPORU</a></li>
+			<li><a href="../saglik-raporu">SAĞLIK RAPORU</a></li>
+			<li><a href="../istirahat-raporu" class="active">İSTİRAHAT RAPORU</a></li>
+			<li><a href="../dogum-raporu">DOĞUM RAPORU</a></li>
+			<li><a href="../olum-raporu">ÖLÜM RAPORU</a></li>
+			<li><a href="../otopsi-raporu">OTOPSİ RAPORU</a></li>
+		</ul>
+	</nav>
+	<div class="istirahat-raporuIMG" align="center">
+		<img src="../src/img/istirahat-raporu.jpg" alt="İstirahat Raporu">
+	</div>
+	<div class="istirahat-raporuContainer">
+		<form id="saglik-raporu-sablonu">
+			<h3><u>Hastanın;</u></h3>
+			<label for="istirahatRaporuVatandaslikNo"><b>Vatandaşlık Numarası:</b></label>
+			<input type="text" id="istirahatRaporuVatandaslikNo" name="istirahatRaporuVatandaslikNo" placeholder="N/A" maxlength="8">
+			<label for="istirahatRaporuAdSoyad"><b>Ad / Soyad:</b></label>
+			<input type="text" id="istirahatRaporuAdSoyad" name="istirahatRaporuAdSoyad" placeholder="Susan Rowan"><br><br>
+			<label for="istirahatRaporuDogumTarihi"><b>Yaş:</b></label>
+			<input type="number" id="istirahatRaporuDogumTarihi" name="istirahatRaporuDogumTarihi">
+			<br><br>
+			<label for="istirahatRaporuMeslek"><b>Mesleği ve Kurum:</b></label>
+			<input type="text" id="istirahatRaporuMeslek" name="istirahatRaporuMeslek" placeholder="Polis Memuru - LSPD" style="width: 25%;">
+			<hr>
+			<label for="istirahatRaporuKlinik"><b>Klinik:</b></label>
+			<input type="text" id="istirahatRaporuKlinik" name="istirahatRaporuKlinik" placeholder="Ortopedi ve Travmatoloji">
+			<label for="istirahatRaporuTeshis"><b>Tanı / Teşhis:</b></label>
+			<input type="text" id="istirahatRaporuTeshis" name="istirahatRaporuTeshis" placeholder="N/A" style="width: 25%;">
+			<br><br>
+			<label for="istirahatRaporuMuayeneTarih"><b>Muayene Tarihi:</b></label>
+			<input type="date" id="istirahatRaporuMuayeneTarih" name="istirahatRaporuMuayeneTarih">
+			<label for="istirahatRaporuIsbasiTarih"><b>İşbaşı Tarihi:</b></label>
+			<input type="date" id="istirahatRaporuIsbasiTarih" name="istirahatRaporuIsbasiTarih">
+			<hr>
+			<h3><u>KARAR;</u></h3>
+			<input type="text" id="istirahatRaporuKarar" name="istirahatRaporuKarar" placeholder="Quinn Mitchell isimli hastanın, yukarıda belirtilen tarihler arasında 2 gün istirahat etmesi uygun görülmüştür." style="width: 100%;">
+			<hr>
+			<h3><u>Doktorun;</u></h3>
+			<label for="istirahatRaporuPersonelAdSoyad"><b>Unvanı, Adı ve Soyadı:</b></label>
+			<input type="text" id="istirahatRaporuPersonelAdSoyad" name="istirahatRaporuPersonelAdSoyad" placeholder="Dr. Susan Rowan">
+			<br><br>
+			<label for="istirahatRaporuPersonelImza"><b>İmza/Kaşe:</b></label>
+			<input type="text" id="istirahatRaporuPersonelImza" name="istirahatRaporuPersonelImza" placeholder="[img]https://i.hizliresim.com/NN6jSa.png[/img]" style="width: 35%;">
+			<input type="reset" class="tasarim_button" value="FORMU TEMİZLE" style="width: 15%;">
+			<br><br>
+			<span>((Hasta kayıtının altına ve istirahat raporu verilen oyuncuya Forum PM olarak atılıyor.))</span>
+		</form>
+<br>
+<button class="tasarim_button" onclick="istirahatRaporuVerileriYazdir()">YAZDIR</button>
+<h5>Yazdır'a bastıktan sonra aşağıdaki kutuya tıklayarak, kopyalayınız.</h5>
+<pre contenteditable="true" class="olusan_sablon" onclick="selectAllForm()">
+[div style="padding:10px; border:1px solid #e2e2e2"]
+[center]
+[table]
+[tr]
+[td]    [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853353894184484865/lsmd_asgh2.png[/img][/td]
+[td]             [/td]
+[td]
+
+[div style="padding:10px; border-left:5px solid #89b5dd; border-right:5px solid #89b5dd;"]
+
+
+[center][size=18pt][b]İSTİRAHAT RAPORU[/b][/size][/center]
+
+
+[/td]
+[td]             [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853276763484323870/hgh_logo.png[/img][/td]
+[td]    [/td]
+[/tr]
+[/table]
+[/center]
+[hr]
+
+[b][u][size=12pt]Hastanın;[/size][/u][/b]
+
+[b]Vatandaşlık Numarası:[/b] <span id="span_istirahatRaporuVatandaslikNo">N/A</span>
+
+[b]Adı ve Soyadı:[/b] <span id="span_istirahatRaporuAdSoyad">N/A</span>
+
+[b]Yaş:[/b] <span id="span_istirahatRaporuDogumTarihi">N/A</span>
+
+[b]Mesleği ve Kurum:[/b] <span id="span_istirahatRaporuMeslek">N/A</span>
+
+[hr]
+
+[b]Klinik:[/b] <span id="span_istirahatRaporuKlinik">N/A</span>
+
+[b]Tanı / Teşhis:[/b] <span id="span_istirahatRaporuTeshis">N/A</span>
+
+[b]Muayene Tarihi:[/b] <span id="span_istirahatRaporuMuayeneTarih">YYYY.AA.GG</span>
+
+[b]İşbaşı Tarihi:[/b] <span id="span_istirahatRaporuIsbasiTarih">YYYY.AA.GG</span>
+
+[hr]
+
+[b][u][size=12pt]KARAR:[/size][/u][/b]
+
+<span id="span_istirahatRaporuKarar">Quinn Mitchell isimli hastanın, yukarıda belirtilen tarihler arasında 2 gün istirahat etmesi uygun görülmüştür.</span>
+
+[hr]
+
+[b][u][size=12pt]Doktorun;[/size][/u][/b]
+
+[b]Unvanı, Adı ve Soyadı:[/b] <span id="span_istirahatRaporuPersonelAdSoyad">N/A</span>
+
+[right][b]İmza/Kaşe: [/b]<span id="span_istirahatRaporuPersonelImza">N/A</span>[/right]
+
+[/div]
+</pre>
+	</div>
+<script src="../src/js/master.js"></script>
+</body>
+</html>

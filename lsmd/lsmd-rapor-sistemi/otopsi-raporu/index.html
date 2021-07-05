@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="LSMD Rapor Sistemi">
+	<meta name="author" content="dreps#5646">
+	<link rel="stylesheet" href="../src/css/master.css">
+	<link rel="icon" type="image/gif/png" href="https://cdn.discordapp.com/attachments/780839923824590849/853354765521780776/lsmd_asgh.png">
+	<title>LSMD Rapor Sistemi</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="..">ANA SAYFA</a></li>
+			<li><a href="../hasta-kayit">HASTA KAYIT</a></li>
+			<li><a href="../ems-rapor">EMS RAPOR</a></li>
+			<li><a href="../recete">REÇETE</a></li>
+			<li><a href="../ameliyat-raporu">AMELİYAT RAPORU</a></li>
+			<li><a href="../psikoloji-raporu">PSİKOLOJİ RAPORU</a></li>
+			<li><a href="../darp-raporu">DARP RAPORU</a></li>
+			<li><a href="../saglik-raporu">SAĞLIK RAPORU</a></li>
+			<li><a href="../istirahat-raporu">İSTİRAHAT RAPORU</a></li>
+			<li><a href="../dogum-raporu">DOĞUM RAPORU</a></li>
+			<li><a href="../olum-raporu">ÖLÜM RAPORU</a></li>
+			<li><a href="../otopsi-raporu" class="active">OTOPSİ RAPORU</a></li>
+		</ul>
+	</nav>
+	<div class="otopsi-raporuIMG" align="center">
+		<img src="../src/img/otopsi-raporu.jpg" alt="Otopsi Raporu">
+	</div>
+	<div class="otopsi-raporuContainer">
+		<form id="otopsi-raporu-sablonu">
+			<h3><u>EX Kişinin;</u></h3>
+			<label for="otopsiRaporuVatandaslikNo"><b>Vatandaşlık Numarası:</b></label>
+			<input type="text" id="otopsiRaporuVatandaslikNo" name="otopsiRaporuVatandaslikNo" placeholder="N/A" maxlength="8">
+			<label for="otopsiRaporuAdSoyad"><b>Ad / Soyad:</b></label>
+			<input type="text" id="otopsiRaporuAdSoyad" name="otopsiRaporuAdSoyad" placeholder="Susan Rowan"><br><br>
+			<label for="otopsiRaporDogumTarihi"><b>Yaş:</b></label>
+			<input type="number" id="otopsiRaporDogumTarihi" name="otopsiRaporDogumTarihi">
+			<label for="otopsiRaporuCinsiyet"><b>Cinsiyeti:</b></label>
+			<select id="otopsiRaporuCinsiyet" name="hastanin_cinsiyet_secenekleri" form="olum-raporu-sablonu">
+				<option value="Erkek">Erkek</option>
+				<option value="Kadın">Kadın</option>
+				<option value="Diğer">Diğer</option>	
+			</select>
+			<br><br>
+			<label for="otopsiRaporOlumTarihi"><b>Ölü Bulunduğu / Ölüm Tarihi:</b></label>
+			<input type="date" id="otopsiRaporOlumTarihi" name="otopsiRaporOlumTarihi">
+			<br><br>
+			<label for="otopsiRaporOtopsiTarih"><b>Otopsi Tarihi ve Saati:</b></label>
+			<input type="date" id="otopsiRaporOtopsiTarih" name="otopsiRaporOtopsiTarih">
+			<input type="time" id="otopsiRaporOtopsiSaat" name="otopsiRaporOtopsiSaat">
+			<br><br>
+			<label for="otopsiRaporuOlumYeri"><b>Ölüm Yeri:</b></label>
+			<input type="text" id="otopsiRaporuOlumYeri" name="otopsiRaporuOlumYeri" placeholder="Market St.">
+			<br><br>
+			<label for="otopsiRaporuIsteyenKurum"><b>Otopsiyi İsteyen Kurum / Departman:</b></label>
+			<input type="text" id="otopsiRaporuIsteyenKurum" name="otopsiRaporuIsteyenKurum" placeholder="LVMPD">
+			<br><br>
+			<label for="otopsiRaporuYapildigiYer"><b>Otopsinin Yapıldığı Yer:</b></label>
+			<input type="text" id="otopsiRaporuYapildigiYer" name="otopsiRaporuYapildigiYer" placeholder="ASGH">
+			<br><br>
+			<label for="otopsiRaporuOlumNedeni"><b>Ölüm Nedeni:</b></label>
+			<input type="text" id="otopsiRaporuOlumNedeni" name="otopsiRaporuOlumNedeni" placeholder="N/A">
+			<label for="otopsiRaporuOtopsiyiYapanlar"><b>Otopsiyi Yapanlar:</b></label>
+			<input type="text" id="otopsiRaporuOtopsiyiYapanlar" name="otopsiRaporuOtopsiyiYapanlar" placeholder="N/A">
+			<hr>
+			<h3><u>Hastanenin;</u></h3>
+			<label for="otopsiRaporuDisMuayene"><b>Yapmış Olduğu Dış Muayene:</b></label>
+			<input type="text" id="otopsiRaporuDisMuayene" name="otopsiRaporuDisMuayene" placeholder="N/A" style="width: 100%;">
+			<br><br>
+			<label for="otopsiRaporuIcMuayene"><b>Yapmış Olduğu Dış Muayene:</b></label>
+			<input type="text" id="otopsiRaporuIcMuayene" name="otopsiRaporuIcMuayene" placeholder="N/A" style="width: 100%;">
+			<br><br>
+			<label for="otopsiRaporuSonuc"><b>Yapmış Olduğu Dış Muayene:</b></label>
+			<input type="text" id="otopsiRaporuSonuc" name="otopsiRaporuSonuc" placeholder="N/A" style="width: 100%;">
+			<hr>
+			<h3><u>Doktorun;</u></h3>
+			<label for="otopsiRaporuPersonelAdSoyad"><b>Unvanı, Adı ve Soyadı:</b></label>
+			<input type="text" id="otopsiRaporuPersonelAdSoyad" name="otopsiRaporuPersonelAdSoyad" placeholder="Dr. Susan Rowan">
+			<br><br>
+			<label for="otopsiRaporuPersonelImza"><b>İmza/Kaşe:</b></label>
+			<input type="text" id="otopsiRaporuPersonelImza" name="otopsiRaporuPersonelImza" placeholder="[img]https://i.hizliresim.com/NN6jSa.png[/img]" style="width: 35%;">
+			<input type="reset" class="tasarim_button" value="FORMU TEMİZLE" style="width: 15%;">
+			<br><br>
+			<span>((Hasta kayıtının altına ve otopsi raporu verilen oyuncuya Forum PM olarak atılıyor.))</span>
+		</form>
+<br>
+<button class="tasarim_button" onclick="otopsiRaporuVerileriYazdir()">YAZDIR</button>
+<h5>Yazdır'a bastıktan sonra aşağıdaki kutuya tıklayarak, kopyalayınız.</h5>
+<pre contenteditable="true" class="olusan_sablon" onclick="selectAllForm()">
+[div style="padding:10px; border:1px solid #e2e2e2"]
+[center]
+[table]
+[tr]
+[td]    [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853353894184484865/lsmd_asgh2.png[/img][/td]
+[td]             [/td]
+[td]
+
+[div style="padding:10px; border-left:5px solid #89b5dd; border-right:5px solid #89b5dd;"]
+
+
+[center][size=18pt][b]OTOPSİ RAPORU[/b][/size][/center]
+
+
+[/td]
+[td]             [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853276763484323870/hgh_logo.png[/img][/td]
+[td]    [/td]
+[/tr]
+[/table]
+[/center]
+[hr]
+
+[b][u][size=12pt]EX Kişinin;[/size][/u][/b]
+
+[b]Vatandaşlık Numarası:[/b] <span id="span_otopsiRaporuVatandaslikNo">N/A</span>
+
+[b]Adı ve Soyadı:[/b] <span id="span_otopsiRaporuAdSoyad">N/A</span>
+
+[b]Yaş:[/b] <span id="span_otopsiRaporDogumTarihi">N/A</span>
+
+[b]Cinsiyeti:[/b] <span id="span_otopsiRaporuCinsiyet">N/A</span>
+
+[b]Ölü Bulunduğu / Ölüm Tarihi:[/b] <span id="span_otopsiRaporOlumTarihi">GG.AA.YYYY</span>
+
+[b]Otopsi Tarihi ve Saati:[/b] <span id="span_otopsiRaporOtopsiTarih">GG.AA.YYYY</span> - <span id="span_otopsiRaporOtopsiSaat">SS.DD</span>
+
+[b]Ölüm Yeri:[/b] <span id="span_otopsiRaporuOlumYeri">N/A</span>
+
+[b]Otopsiyi İsteyen Kurum / Departman:[/b] <span id="span_otopsiRaporuIsteyenKurum">N/A</span>
+
+[b]Otopsinin Yapıldığı Yer:[/b] <span id="span_otopsiRaporuYapildigiYer">N/A</span>
+
+[b]Ölüm Nedeni:[/b] <span id="span_otopsiRaporuOlumNedeni">N/A</span>
+
+[b]Otopsiyi Yapanlar:[/b] <span id="span_otopsiRaporuOtopsiyiYapanlar">N/A</span>
+
+[hr]
+
+[b][u][size=12pt]Hastanenin;[/size][/u][/b]
+
+[b]Yapmış Olduğu Dış Muayene:[/b] <span id="span_otopsiRaporuDisMuayene">N/A</span>
+
+[b]Yapmış Olduğu İç Muayene:[/b] <span id="span_otopsiRaporuIcMuayene">N/A</span>
+
+[b]Otopsi Sonucu:[/b] <span id="span_otopsiRaporuSonuc">N/A</span>
+
+[hr]
+
+[b][u][size=12pt]Doktorun;[/size][/u][/b]
+
+[b]Unvanı, Adı ve Soyadı:[/b] <span id="span_otopsiRaporuPersonelAdSoyad">N/A</span>
+
+[right][b]İmza/Kaşe: [/b]<span id="span_otopsiRaporuPersonelImza">N/A</span>[/right]
+
+[/div]
+</pre>
+	</div>
+<script src="../src/js/master.js"></script>
+</body>
+</html>

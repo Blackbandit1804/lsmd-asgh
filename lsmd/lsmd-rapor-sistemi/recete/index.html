@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="LSMD Rapor Sistemi">
+	<meta name="author" content="dreps#5646">
+	<link rel="stylesheet" href="../src/css/master.css">
+	<link rel="icon" type="image/gif/png" href="https://cdn.discordapp.com/attachments/780839923824590849/853354765521780776/lsmd_asgh.png">
+	<title>LSMD Rapor Sistemi</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="..">ANA SAYFA</a></li>
+			<li><a href="../hasta-kayit">HASTA KAYIT</a></li>
+			<li><a href="../ems-rapor">EMS RAPOR</a></li>
+			<li><a href="../recete" class="active">REÇETE</a></li>
+			<li><a href="../ameliyat-raporu">AMELİYAT RAPORU</a></li>
+			<li><a href="../psikoloji-raporu">PSİKOLOJİ RAPORU</a></li>
+			<li><a href="../darp-raporu">DARP RAPORU</a></li>
+			<li><a href="../saglik-raporu">SAĞLIK RAPORU</a></li>
+			<li><a href="../istirahat-raporu">İSTİRAHAT RAPORU</a></li>
+			<li><a href="../dogum-raporu">DOĞUM RAPORU</a></li>
+			<li><a href="../olum-raporu">ÖLÜM RAPORU</a></li>
+			<li><a href="../otopsi-raporu">OTOPSİ RAPORU</a></li>
+		</ul>
+	</nav>
+	<div class="receteIMG" align="center">
+		<img src="../src/img/recete.jpg" alt="Reçete">
+	</div>
+	<div class="receteContainer">
+		<form id="recete-sablonu">
+			<h3><u>Hastanın;</u></h3>
+			<label for="receteVatandaslikNo"><b>Vatandaşlık Numarası:</b></label>
+			<input type="text" id="receteVatandaslikNo" name="receteVatandaslikNo" placeholder="N/A" maxlength="8">
+			<label for="receteAdSoyad"><b>Ad / Soyad:</b></label>
+			<input type="text" id="receteAdSoyad" name="receteAdSoyad" placeholder="Susan Rowan">
+			<br><br>
+			<label for="receteTarih"><b>Tarih:</b></label>
+			<input type="date" id="receteTarih" name="receteTarih">
+			<label for="receteTani"><b>Tanı:</b></label>
+			<input type="text" id="receteTani" name="receteTani" placeholder="N/A" style="width: 35%;">
+			<hr>
+			<label for="recetePersonelAdSoyad"><b>Doktorun; Unvanı, Ad, Soyad:</b></label>
+			<input type="text" id="recetePersonelAdSoyad" name="recetePersonelAdSoyad" placeholder="Dr. Susan Rowan">
+			<br><br>
+			<label for="recetePersonelImza"><b>İmza/Kaşe:</b></label>
+			<input type="text" id="recetePersonelImza" name="recetePersonelImza" placeholder="[img]https://i.hizliresim.com/NN6jSa.png[/img]" style="width: 35%;">
+			<hr>
+			<center>
+			<h3><u>İLAÇLAR</u></h3>
+			<hr>
+			<textarea id="receteIlaclar" form="recete-sablonu" rows="7" cols="100" placeholder="İlaç isimi, dozajı vb. bilgiler alt alta bu kısıma yazılacak."></textarea>
+			</center>
+			<br>
+			<input type="reset" class="tasarim_button" value="FORMU TEMİZLE" style="width: 15%;">
+			<span>((Hasta kayıtının altına ve reçete verilen oyuncuya Forum PM olarak atılıyor.))</span>
+		</form>
+<br>
+<button class="tasarim_button" onclick="receteVerileriYazdir()">YAZDIR</button>
+<h5>Yazdır'a bastıktan sonra aşağıdaki kutuya tıklayarak, kopyalayınız.</h5>
+<pre contenteditable="true" class="olusan_sablon" onclick="selectAllForm()">
+[div style="padding:10px; border:1px solid #e2e2e2"]
+[center]
+[table]
+[tr]
+[td]    [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853353894184484865/lsmd_asgh2.png[/img][/td]
+[td]             [/td]
+[td]
+
+[div style="padding:10px; border-left:5px solid #89b5dd; border-right:5px solid #89b5dd;"]
+
+
+[center][size=18pt][b]ELEKRONİK REÇETE[/b][/size][/center]
+
+
+[/td]
+[td]             [/td]
+[td][img width=200 height=150]https://cdn.discordapp.com/attachments/780839923824590849/853276763484323870/hgh_logo.png[/img][/td]
+[td]    [/td]
+[/tr]
+[/table]
+[/center]
+[hr]
+[b][u][size=12pt]Hastanın;[/size][/u][/b]
+[hr]
+[b]Vatandaşlık Numarası:[/b] <span id="span_receteVatandaslikNo">N/A</span>
+[hr]
+[b]Adı ve Soyadı:[/b] <span id="span_receteAdSoyad">N/A</span>
+[hr]
+[b]Tarih:[/b] <span id="span_receteTarih">YYYY.AA.GG</span>
+[hr]
+[b]Tanı:[/b] <span id="span_receteTani">N/A</span>
+[hr]
+[divbox=#]
+
+[b]Doktorun; Unvanı, Ad, Soyad:[/b] <span id="span_recetePersonelAdSoyad">N/A</span>
+
+[b]İmza/Kaşe:[/b] <span id="span_recetePersonelImza">N/A</span>
+
+[/divbox]
+[hr]
+
+[center]
+[b][u][size=18pt]İLAÇLAR[/size][/u][/b]
+
+[hr]
+[tt]
+
+<span id="span_receteIlaclar">İlaç isimi, dozajı vb. bilgiler bu kısıma yazılacak.</span>
+
+[/tt]
+[/center]
+[/div]	
+</pre>
+	</div>
+<script src="../src/js/master.js"></script>
+</body>
+</html>
